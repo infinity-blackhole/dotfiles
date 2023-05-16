@@ -1,0 +1,9 @@
+{{- if eq .chezmoi.os "windows" -}}
+#!/usr/bin/env pwsh
+
+Switch ($env:computername) {
+    "ISHTAR" {
+        scoop import scoopfile.json
+    }
+}
+{{- end -}}

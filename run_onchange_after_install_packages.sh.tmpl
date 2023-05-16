@@ -1,0 +1,9 @@
+{{- if or (eq .chezmoi.os "darwin") (eq .chezmoi.os "linux") -}}
+#!/usr/bin/env sh
+
+case $HOSTNAME in
+    altashar)
+        brew bundle --no-lock
+        ;;
+esac
+{{- end -}}

@@ -1,0 +1,11 @@
+{{- if eq .chezmoi.os "windows" -}}
+#!/usr/bin/env pwsh
+
+Switch ($env:computername) {
+    "ISHTAR" {
+        if (!(Get-Command scoop -ErrorAction SilentlyContinue)) {
+            irm get.scoop.sh | iex
+        }
+    }
+}
+{{- end -}}
