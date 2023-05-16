@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+# Install Nix
+{{- if eq .chezmoi.hostname "altashar" -}}
+curl -L https://nixos.org/nix/install | sh -s -- --yes --daemon
+{{ end -}}
+
+# Install Homebrew
+{{- if eq .chezmoi.hostname "altashar" -}}
+brew bundle --no-lock
+{{ end -}}
