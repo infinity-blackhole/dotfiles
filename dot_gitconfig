@@ -1,0 +1,46 @@
+[advice]
+	skippedCherryPicks = false
+
+[alias]
+	adog = "log --all --decorate --oneline --graph"
+	filing = "commit --amend --signoff --no-edit"
+	poi = "commit --amend --no-edit"
+	pouf = "push --force-with-lease"
+	refiling = "rebase --exec 'git filing'"
+	tape = "push --all --follow-tags blackbox"
+
+[commit]
+	gpgSign = true
+
+[core]
+	editor = "nvim"
+
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+
+[filter "lfs"]
+	clean = "git-lfs clean -- %f"
+	process = "git-lfs filter-process"
+	required = true
+	smudge = "git-lfs smudge -- %f"
+
+[init]
+	defaultBranch = "main"
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[rebase]
+	autostash = true
+	updateRefs = true
+
+[tag]
+	gpgSign = true
+
+[user]
+	email = "william.phetsinorath@shikanime.studio"
+	name = "William Phetsinorath"
+	signingKey = "025CF1599FA70256"
