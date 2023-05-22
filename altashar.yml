@@ -1,0 +1,66 @@
+- name: Install Homebrew packages
+  hosts: localhost
+  tasks:
+    - name: Tap Homebrew repositories
+      homebrew_tap:
+        name:
+          - homebrew/cask
+          - homebrew/cask-drivers
+          - microsoft/git
+
+    - name: Install Homebrew packages
+      homebrew:
+        name:
+          - mas
+          - diffutils
+          - gnupg
+          - pinentry-mac
+          - ccache
+          - ninja
+          - clang-format
+          - bazelisk
+          - syncthing
+
+    - name: Install Homebrew casks
+      homebrew_cask:
+        name:
+          - p4v
+          - git-credential-manager-core
+          - cmake
+          - android-studio
+          - visual-studio-code
+          - dbeaver-community
+          - jetbrains-toolbox
+          - wireshark
+          - rancher
+          - mpv
+          - brave-browser-dev
+          - google-chrome-dev
+          - firefox-developer-edition
+          - microsoft-edge-dev
+          - signal
+          - zoom
+          - microsoft-teams
+          - workplace-chat
+          - google-drive
+          - transmission
+          - chrome-remote-desktop-host
+          - microsoft-remote-desktop
+          - rectangle
+          - krita
+          - obs
+          - android-file-transfer
+          - the-unarchiver
+          - appcleaner
+          - 1kc-razer
+          - wacom-tablet
+
+    - name: Install Mac App Store applications
+      mas:
+        id:
+          - 497_799_835 # Xcode
+          - 803_453_959 # Slack
+          - 409_201_541 # Pages
+          - 409_203_825 # Numbers
+          - 409_183_694 # Keynote
+          - 937_984_704 # Amphetamine
