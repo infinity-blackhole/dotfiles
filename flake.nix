@@ -38,7 +38,7 @@
               packages = [
                 pkgs.nixpkgs-fmt
                 pkgs.gh
-                pkgs.chezmoi
+                pkgs.ansible
               ];
             }
           ];
