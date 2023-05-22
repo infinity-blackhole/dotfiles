@@ -20,6 +20,7 @@
           - clang-format
           - bazelisk
           - syncthing
+        upgrade_all: true
 
     - name: Install Homebrew casks
       homebrew_cask:
@@ -54,6 +55,7 @@
           - appcleaner
           - 1kc-razer
           - wacom-tablet
+        upgrade_all: true
 
     - name: Install Mac App Store applications
       mas:
@@ -64,3 +66,4 @@
           - 409_203_825 # Numbers
           - 409_183_694 # Keynote
           - 937_984_704 # Amphetamine
+        upgrade_all: true
