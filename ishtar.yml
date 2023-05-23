@@ -15,24 +15,19 @@
       win_scoop:
         name:
           - 7zip
-          - 7zip19.00-helper
           - adb
           - aria2
           - cacert
-          - chezmoi
           - crystaldiskinfo
           - crystaldiskmark
           - curl
-          - dark
           - direnv
           - git
           - helm
-          - jmeter
           - lxrunoffline
           - make
           - neovim
           - nmap
           - nodejs
           - nu
-          - python
           - rclone
