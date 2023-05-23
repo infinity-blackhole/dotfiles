@@ -1,6 +1,6 @@
 ---
 - name: Install Scoop packages
-  hosts: localhost
+  hosts: ishtar
   tasks:
     - name: Add extras bucket
       community.windows.win_scoop_bucket:
