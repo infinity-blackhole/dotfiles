@@ -29,3 +29,54 @@
       - nodejs
       - nu
       - rclone
+
+- name: Install Windows Application
+  ansible.windows.win_powershell:
+    script: |
+      $app = "{{ item }}"
+      if ($(winget list $app) -like "*No installed package found*") {
+        winget install --accept-package-agreements --accept-source-agreements -h -s "winget" $app
+      } else {
+        winget upgrade $app
+      }
+  loop:
+    - 7zip.7zip
+    - Battle.net
+    - CPUID.CPU-Z
+    - CPUID.HWMonitor
+    - dbeaver.dbeaver
+    - Discord.Discord
+    - EpicGames.EpicGamesLauncher
+    - Git.Git
+    - GitHub.cli
+    - GitHub.GitHubDesktop
+    - GitHub.GitLFS
+    - GnuPG.GnuPG
+    - Google.Chrome.Dev
+    - Google.ChromeRemoteDesktop
+    - Google.Drive
+    - KDE.Krita
+    - Kitware.CMake
+    - Klocman.BulkCrapUninstaller
+    - LLVM.LLVM
+    - Microsoft.Edge.Dev
+    - Microsoft.GitCredentialManagerCore
+    - Microsoft.PowerToys
+    - Microsoft.VisualStudioCode
+    - Microsoft.WindowsTerminal
+    - Nvidia.Broadcast
+    - Nvidia.GeForceExperience
+    - Peppy.Osu!
+    - Perforce.P4V
+    - SlackTechnologies.Slack
+    - suse.RancherDesktop
+    - SyncTrayzor.SyncTrayzor
+    - Transmission.Transmission
+    - Valve.Steam
+    - Wacom.WacomTabletDriver
+    - Zoom.Zoom
+    - Python.Python.3.11
+    - Python.Python.3.10
+    - Python.Python.3.9
+    - Python.Python.3.8
+    - Python.Python.3.7
