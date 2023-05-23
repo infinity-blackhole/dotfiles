@@ -1,18 +1,19 @@
+---
 - name: Install Scoop packages
   hosts: localhost
   tasks:
     - name: Add extras bucket
-      win_scoop_bucket:
+      community.windows.win_scoop_bucket:
         name: extras
         source: https://github.com/ScoopInstaller/Extras
 
     - name: Add versions bucket
-      win_scoop_bucket:
+      community.windows.win_scoop_bucket:
         name: versions
         source: https://github.com/ScoopInstaller/Versions
 
     - name: Install Scoop packages
-      win_scoop:
+      community.windows.win_scoop:
         name:
           - 7zip
           - adb
