@@ -41,6 +41,7 @@
                 pkgs.gh
                 pkgs.glab
                 pkgs.sshpass
+                pkgs.python3
                 pkgs.ansible
                 pkgs.ansible-lint
               ];
