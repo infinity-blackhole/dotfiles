@@ -1,0 +1,9 @@
+---
+- name: Install Isthar
+  hosts: ishtar
+  roles:
+    - ishtar
+- name: Install Altashar
+  hosts: altashar
+  roles:
+    - altashar

@@ -1,0 +1,12 @@
+[altashar]
+altashar.local
+
+[altashar:vars]
+ansible_ssh_user=williamphetsinorath
+
+[ishtar]
+ishtar.local
+
+[ishtar:vars]
+ansible_ssh_user=devas
+ansible_shell_type=cmd

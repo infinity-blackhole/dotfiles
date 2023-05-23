@@ -34,12 +34,15 @@
                 statix.enable = true;
                 deadnix.enable = true;
                 prettier.enable = true;
+                ansible-lint.enable = true;
               };
               packages = [
                 pkgs.nixpkgs-fmt
                 pkgs.gh
                 pkgs.glab
+                pkgs.sshpass
                 pkgs.ansible
+                pkgs.ansible-lint
               ];
             }
           ];

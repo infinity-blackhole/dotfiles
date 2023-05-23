@@ -1,34 +1,31 @@
 ---
+- name: Add extras bucket
+  community.windows.win_scoop_bucket:
+    name: extras
+    repo: https://github.com/ScoopInstaller/Extras
+
+- name: Add versions bucket
+  community.windows.win_scoop_bucket:
+    name: versions
+    repo: https://github.com/ScoopInstaller/Versions
+
 - name: Install Scoop packages
-  hosts: ishtar
-  tasks:
-    - name: Add extras bucket
-      community.windows.win_scoop_bucket:
-        name: extras
-        source: https://github.com/ScoopInstaller/Extras
-
-    - name: Add versions bucket
-      community.windows.win_scoop_bucket:
-        name: versions
-        source: https://github.com/ScoopInstaller/Versions
-
-    - name: Install Scoop packages
-      community.windows.win_scoop:
-        name:
-          - 7zip
-          - adb
-          - aria2
-          - cacert
-          - crystaldiskinfo
-          - crystaldiskmark
-          - curl
-          - direnv
-          - git
-          - helm
-          - lxrunoffline
-          - make
-          - neovim
-          - nmap
-          - nodejs
-          - nu
-          - rclone
+  community.windows.win_scoop:
+    name:
+      - 7zip
+      - adb
+      - aria2
+      - cacert
+      - crystaldiskinfo
+      - crystaldiskmark
+      - curl
+      - direnv
+      - git
+      - helm
+      - lxrunoffline
+      - make
+      - neovim
+      - nmap
+      - nodejs
+      - nu
+      - rclone
